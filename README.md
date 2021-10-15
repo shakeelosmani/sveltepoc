@@ -31,6 +31,21 @@ npm run dev -- --open
 
 Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
+### ex:
+```bash
+npm install @sveltejs/adapter-node@next
+```
+
+Update svelte.config.js
+```javascript
+kit: {
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: '#svelte',
+		adapter: node()
+	}
+```
+
+
 ```bash
 npm run build
 ```
